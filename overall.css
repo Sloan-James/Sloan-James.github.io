@@ -21,16 +21,3 @@ li a {
 li a:hover {
   background-color: #111;
 }
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-table, tr, th, td {
-  border: 1px solid black;
-}
-
-td {
-  width: 50%;
-}
