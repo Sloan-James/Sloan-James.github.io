@@ -2,6 +2,7 @@ function changeCanvas(name){
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
     ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.beginPath();
   switch(name) {
     case "Strikethrough":
       strikethrough(ctx);
@@ -28,7 +29,6 @@ function strikethrough(ctx) {
 }
 
 function circle(ctx) {
-  ctx.beginPath();
   ctx.arc(95,50,40,0,2*Math.PI);
   ctx.stroke();
 }
