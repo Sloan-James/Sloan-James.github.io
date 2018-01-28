@@ -1,7 +1,3 @@
-body {
-  background-color: blue;
-}
-
 table {
   border-collapse: collapse;
   width: 100%;
@@ -9,4 +5,8 @@ table {
 
 table, tr, th, td {
   border: 1px, solid, black;
+}
+
+th {
+  width: 33.3%;
 }
