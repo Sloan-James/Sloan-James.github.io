@@ -2,6 +2,7 @@ function changeCanvas(name){
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
     ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle = none;
     ctx.beginPath();
   switch(name) {
     case "Strikethrough":
@@ -34,7 +35,7 @@ function circle(ctx) {
 }
 
 function hello(ctx) {
-  ctx.font = "30px Arial black";
+  ctx.font = "30px Arial";
   ctx.fillText("Hello World",10,50);
 }
 
