@@ -1,10 +1,9 @@
 function changeCanvas(name){
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#FFFFFF";
+    ctx.fillRect(0,0,200,100);
   switch(name) {
-    case "Empty":
-      empty(ctx);
-      break;
     case "Strikethrough":
       strikethrough(ctx);
       break;
@@ -21,11 +20,6 @@ function changeCanvas(name){
   }
 
   return;
-}
-
-function empty(ctx) {
-  ctx.fillStyle = "#000000";
-  ctx.fillRect(0,0,200,100);
 }
 
 function strikethrough(ctx) {
