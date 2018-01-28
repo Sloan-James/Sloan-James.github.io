@@ -1,8 +1,7 @@
 function changeCanvas(name){
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
-    ctx.fillStyle = "#FFFFFF";
-    ctx.fillRect(0,0,200,100);
+    ctx.clearRect(0,0,200,100);
   switch(name) {
     case "Strikethrough":
       strikethrough(ctx);
