@@ -3,7 +3,7 @@ function changeCanvas(name){
     var ctx = canvas.getContext("2d");
   switch(name) {
     case "Empty":
-      empty(ctx;
+      empty(ctx);
       break;
     case "Strikethrough":
       strikethrough(ctx);
