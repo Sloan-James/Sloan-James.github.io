@@ -34,7 +34,7 @@ function circle(ctx) {
 }
 
 function hello(ctx) {
-  ctx.font = "30px Arial";
+  ctx.font = "30px Arial black";
   ctx.fillText("Hello World",10,50);
 }
 
