@@ -4,9 +4,9 @@ table {
 }
 
 table, tr, th, td {
-  border: 1px, solid, black;
+  border: 1px solid black;
 }
 
-th {
-  width: 33.3%;
+td {
+  width: 50%;
 }
