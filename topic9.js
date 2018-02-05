@@ -33,6 +33,7 @@ function initialize() {
   document.getElementById("date").innerHTML = "This page was loaded on: " + Date();
 
 /*Animation*/
+  var anim = document.getElementById("anim");
   anim.addEventListener("click",ToggleAnimation, false);
 }
 
