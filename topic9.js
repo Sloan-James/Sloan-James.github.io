@@ -16,6 +16,7 @@ function initialize() {
   w = canvas.width;
   h = canvas.height;
 
+/*Mouse use*/
   canvas.addEventListener("mousemove", function (e) {
     findxy('move', e)
   }, false);
@@ -26,6 +27,20 @@ function initialize() {
     findxy('up',e)
   }, false);
   canvas.addEventListener("mouseout",function (e){
+    findxy('out',e)
+  }, false);
+
+/*Touch use*/
+  canvas.addEventListener("touchmove", function (e) {
+    findxy('move', e)
+  }, false);
+  canvas.addEventListener("touchstart", function (e) {
+    findxy('down',e)
+  }, false);
+  canvas.addEventListener("touchend", function (e) {
+    findxy('up',e)
+  }, false);
+  canvas.addEventListener("touchcancel",function (e){
     findxy('out',e)
   }, false);
 
