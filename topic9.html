@@ -4,14 +4,34 @@
     <link rel="stylesheet" type="text/css" href="overall.css">
     <script src="topic9.js"></script>
     <style>
-      #animation {
+      #anim {
         margin: 20px;
         width: 200px;
         height: 200px;
-        background: orange;
+        background: red;
         position: relative;
       }
+      #anim.enable {
+        background: green;
+        -webkit-animation: mymove 2s ease 3;
+        -moz-animation: mymove 2s ease 3;
+        -ms-animation: mymove 2s ease 3;
+        -o-animation: mymove 2s ease 3;
+        animation: mymove 2s ease 3;
+      }
       @-webkit-keyframes mymove {
+        from {left: 0px;}
+        to {left: 400px;}
+      }
+      @-moz-keyframes mymove {
+        from {left: 0px;}
+        to {left: 400px;}
+      }
+      @-ms-keyframes mymove{
+        from {left: 0px;}
+        to {left: 400px;}
+      }
+      @-o-keyframes mymove{
         from {left: 0px;}
         to {left: 400px;}
       }

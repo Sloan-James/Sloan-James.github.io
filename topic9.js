@@ -95,30 +95,30 @@ function save() {
 
 /*Animation Events*/
 var anim = document.getElementById("animation");
+var pfx = ["webkit","moz","MS","o",""];
 
-function moveFunction() {
-  anim.style.WebkitAnimation = "mymove 4s 2";
-  anim.style.animation = "mymove 4s 2";
+anim.addEventListener("click",ToggleAnimation, false);
+
+function PrefixedEvent(element, type, callback) {
+  for (var p = 0; p < pfx.length; p++){
+    if (!pfx[p]) type = type.toLowerCase();
+    element.addEventListener(pfx[p]+type,callback, false);
+    }
 }
 
-// Code for Chrome, Safari and Opera
-anim.addEventListener("webkitAnimationStart", myStartFunction);
-anim.addEventListener("webkitAnimationIteration", myRepeatFunction);
-anim.addEventListener("webkitAnimationEnd", myEndFunction);
+PrefixedEvent(anim, "AnimationStart", AnimationListener);
+PrefixedEvent(anim, "AnimationIteration", AnimationListener);
+PrefixedEvent(anim, "AnimationEnd", AnimationListener);
 
-// Standard syntax
-anim.addEventListener("animationstart", myStartFunction);
-anim.addEventListener("animationiteration", myRepeatFunction);
-anim.addEventListener("animationend", myEndFunction);
-
-function myStartFunction() {
-  this.style.backgroundColor = "green";
+function AnimationListener(e) {
+  if(e.type.toLowerCase().indexOf("animationend") >= 0) {
+    ToggleAnimation();
+  }
 }
 
-function myRepeatFunction() {
-  this.style.backgroundColor = "yellow";
-}
-
-function myEndFunction() {
-  this.style.backgroundColor = "red"
+function ToggleAnimation(e) {
+  var on = (anim.className != "");
+  anim.textContent = "Click to "+(on ? "start" : "stop")+"animation";
+  anim.className = (on ? "" : "enable");
+  if (e) e.preventDefault();
 }
