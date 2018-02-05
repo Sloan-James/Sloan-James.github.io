@@ -27,7 +27,7 @@ function initialize() {
   canvas.addEventListener("mouseup", function (e) {
     findxy('up',e)
   }, false);
-  canvas.addEventLisener("mouseout",function (e){
+  canvas.addEventListener("mouseout",function (e){
     findxy('out',e)
   }, false);
 }
