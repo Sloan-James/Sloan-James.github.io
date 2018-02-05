@@ -30,6 +30,8 @@ function initialize() {
   canvas.addEventListener("mouseout",function (e){
     findxy('out',e)
   }, false);
+
+  document.getElementById("date").innerHTML = "This page was loaded on: " + Date();
 }
 
 function color(obj) {
@@ -92,10 +94,4 @@ function save() {
   var dataURL = canvas.toDataURL();
   document.getElementById("canvasimg").src = dataURL;
   document.getElementById("canvasimg").style.display = "inline";
-}
-
-function myFunction() {
-  var testDiv = document.getElementById("drawCanvas");
-  var demoDiv = document.getElementById("demo");
-  demoDiv.innerHTML = "offsetLeft: " + testDiv.offsetLeft + "<br>offsetTop: " + testDiv.offsetTop;
 }
