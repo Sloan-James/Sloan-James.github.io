@@ -64,8 +64,8 @@ function findxy(res,e) {
   if (res == 'down') {
     prevX = currX;
     prevY = currY;
-    currX = e.clientX;
-    currY = e.clientY;
+    currX = e.clientX - canvas.offsetLeft;
+    currY = e.clientY - canvas.offsetTop;
 
     flag = true;
     dot_flag = true;
@@ -84,14 +84,14 @@ function findxy(res,e) {
     if (flag) {
       prevX = currX;
       prevY = currY;
-      currX = e.clientX;
-      currY = e.clientY;
+      currX = e.clientX - canvas.offsetLeft;
+      currY = e.clientY - canvas.offsetTop;
       draw();
     }
   }
 }
 
-function draw(e){
+function draw(){
   ctx.beginPath();
   ctx.moveTo(prevX,prevY);
   ctx.lineTo(currX,currY);
