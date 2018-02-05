@@ -3,6 +3,23 @@
     <title>CIT 261</title>
     <link rel="stylesheet" type="text/css" href="overall.css">
     <script src="topic9.js"></script>
+    <style>
+      #animation {
+        margin: 20px;
+        width: 200px;
+        height: 200px;
+        background: orange;
+        position: relative;
+      }
+      @-webkit-keyframes mymove {
+        from {left: 0px;}
+        to {left: 400px;}
+      }
+      @keyframes mymove {
+        from {left: 0px;}
+        to {left: 400px;}
+      }
+    </style>
 </head>
 <body onload="initialize()">
   <header>
@@ -29,7 +46,9 @@
   <h1>Standard JavaScript Events Including those for Mobile Devices
     ( Ex. onTouchBegin, onLoad, etc.) and Animation and Transition Events</h1>
   <p id="date">This page was loaded on: </p>
-  <p>Draw here with mouse</p>
+  <h3>Animation:</h3>
+  <div id="animation"></div>
+  <h3>Draw here with mouse</h3>
   <canvas id="drawCanvas" width="400" height="400"
   style="border:2px solid;"></canvas>
         <img id="canvasimg" style="float:right;display:inline-block;display:none;">
@@ -40,10 +59,11 @@
         <div style="float:left;display:inline-block;width:10px;height:10px;background:yellow;" id="yellow" onclick="color(this)"></div>
         <div style="float:left;display:inline-block;width:10px;height:10px;background:orange;" id="orange" onclick="color(this)"></div>
         <div style="float:left;display:inline-block;width:10px;height:10px;background:black;" id="black" onclick="color(this)"></div>
-        <div>Eraser</div>
+        <div style="float:left;display:inline-block;">Eraser</div>
         <div style="float:left;display:inline-block;width:15px;height:15px;background:white;border:2px solid;" id="white" onclick="color(this)"></div>
         <input type="button" value="save" id="btn" size="30" onclick="save()" style="top:55%;left:10%;">
         <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="top:55%;left:15%;">
+  <p>
 
   <footer>
     <p>Maintained and Personally coded by James Sloan</p>

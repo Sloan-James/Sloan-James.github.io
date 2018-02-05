@@ -1,7 +1,4 @@
-/*function displayDate() {
-  var d = Date();
-  document.getElementById("test").innerHTML = d.toDateString();
-}*/
+/* Canvas Drawing */
 var canvas, ctx, flag = false,
     prevX = 0,
     currX = 0,
@@ -94,4 +91,34 @@ function save() {
   var dataURL = canvas.toDataURL();
   document.getElementById("canvasimg").src = dataURL;
   document.getElementById("canvasimg").style.display = "inline";
+}
+
+/*Animation Events*/
+var anim = document.getElementById("animation");
+
+function moveFunction() {
+  anim.style.WebkitAnimation = "mymove 4s 2";
+  anim.style.animation = "mymove 4s 2";
+}
+
+// Code for Chrome, Safari and Opera
+anim.addEventListener("webkitAnimationStart", myStartFunction);
+anim.addEventListener("webkitAnimationIteration", myRepeatFunction);
+anim.addEventListener("webkitAnimationEnd", myEndFunction);
+
+// Standard syntax
+anim.addEventListener("animationstart", myStartFunction);
+anim.addEventListener("animationiteration", myRepeatFunction);
+anim.addEventListener("animationend", myEndFunction);
+
+function myStartFunction() {
+  this.style.backgroundColor = "green";
+}
+
+function myRepeatFunction() {
+  this.style.backgroundColor = "yellow";
+}
+
+function myEndFunction() {
+  this.style.backgroundColor = "red"
 }
