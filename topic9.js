@@ -97,17 +97,13 @@ function save() {
 var anim = document.getElementById("anim");
 var pfx = ["webkit","moz","MS","o",""];
 
-if (anim){
-  anim.addEventListener("click",ToggleAnimation, false);
-}
+anim.addEventListener("click",ToggleAnimation, false);
 
 
 function PrefixedEvent(element, type, callback) {
   for (var p = 0; p < pfx.length; p++){
     if (!pfx[p]) type = type.toLowerCase();
-      if (element){
-        element.addEventListener(pfx[p]+type,callback, false);
-      }
+    element.addEventListener(pfx[p]+type,callback, false);
     }
 }
 

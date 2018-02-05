@@ -5,11 +5,18 @@
     <script src="topic9.js"></script>
     <style>
       #anim {
-        margin: 20px;
-        width: 200px;
-        height: 200px;
+        display: block;
+        width: 20px;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.5em 3em;
+        margin: 2em auto;
         background: red;
-        position: relative;
+        border: 2px solid;
+        border-radius: 5px;
+        outline: 0 none;
       }
       #anim.enable {
         background: green;
@@ -20,24 +27,19 @@
         animation: mymove 2s ease 3;
       }
       @-webkit-keyframes mymove {
-        from {left: 0px;}
-        to {left: 400px;}
+        50% { opacity: 0;}
       }
       @-moz-keyframes mymove {
-        from {left: 0px;}
-        to {left: 400px;}
+        50% { opacity: 0;}
       }
       @-ms-keyframes mymove{
-        from {left: 0px;}
-        to {left: 400px;}
+        50% { opacity: 0;}
       }
       @-o-keyframes mymove{
-        from {left: 0px;}
-        to {left: 400px;}
+        50% { opacity: 0;}
       }
       @keyframes mymove {
-        from {left: 0px;}
-        to {left: 400px;}
+        50% { opacity: 0;}
       }
     </style>
 </head>
