@@ -33,8 +33,8 @@ function initialize() {
 }
 
 function color(obj) {
-  switch(obj.id){
-    case "green":
+  x = obj.id;
+/*    case "green":
       x = "green";
       break;
     case "blue":
@@ -55,7 +55,7 @@ function color(obj) {
     case "white":
       x = "white";
       break;
-  }
+  }*/
   if (x == "white") y = 14;
   else y = 2;
 }
@@ -64,7 +64,7 @@ function findxy(res,e) {
   if (res == 'down') {
     prevX = currX;
     prevY = currY;
-    currX = e.clientX - canvas.offsetLeft;
+    currX = e.clientX;
     currY = e.clientY;
 
     flag = true;
@@ -84,7 +84,7 @@ function findxy(res,e) {
     if (flag) {
       prevX = currX;
       prevY = currY;
-      currX = e.clientX - canvas.offsetLeft;
+      currX = e.clientX;
       currY = e.clientY;
       draw();
     }
