@@ -1,5 +1,5 @@
 function displayDate() {
-  document.getElementById("date").innerHTML = Date().toDateString();
+  document.getElementById("test").innerHTML = Date().toDateString();
 }
 
 function draw(e){
