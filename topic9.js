@@ -34,28 +34,6 @@ function initialize() {
 
 function color(obj) {
   x = obj.id;
-/*    case "green":
-      x = "green";
-      break;
-    case "blue":
-      x = "blue";
-      break;
-    case "red":
-      x = "red";
-      break;
-    case "yellow":
-      x = "yellow";
-      break;
-    case "orange":
-      x = "orange";
-      break;
-    case "black":
-      x = "black";
-      break;
-    case "white":
-      x = "white";
-      break;
-  }*/
   if (x == "white") y = 14;
   else y = 2;
 }
@@ -64,8 +42,8 @@ function findxy(res,e) {
   if (res == 'down') {
     prevX = currX;
     prevY = currY;
-    currX = e.clientX;
-    currY = e.clientY;
+    currX = e.clientX + canvas.offsetLeft;
+    currY = e.clientY + canvas.offsetTop;
 
     flag = true;
     dot_flag = true;
@@ -84,8 +62,8 @@ function findxy(res,e) {
     if (flag) {
       prevX = currX;
       prevY = currY;
-      currX = e.clientX;
-      currY = e.clientY;
+      currX = e.clientX + canvas.offsetLeft;
+      currY = e.clientY + canvas.offsetTop;
       draw();
     }
   }
