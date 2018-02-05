@@ -31,8 +31,7 @@ function initialize() {
     findxy('out',e)
   }, false);
 
-  var d = Date();
-  document.getElementById("date").innerHTML = "This page was loaded on: " + d.toUTCString();
+  document.getElementById("date").innerHTML = "This page was loaded on: " + Date();
 }
 
 function color(obj) {
