@@ -93,3 +93,9 @@ function save() {
   document.getElementById("canvasimg").src = dataURL;
   document.getElementById("canvasimg").style.display = "inline";
 }
+
+function myFunction() {
+  var testDiv = document.getElementById("drawCanvas");
+  var demoDiv = document.getElementById("demo");
+  demoDiv.innerHTML = "offsetLeft: " + testDiv.offsetLeft + "<br>offsetTop: " + testDiv.offsetTop;
+}
