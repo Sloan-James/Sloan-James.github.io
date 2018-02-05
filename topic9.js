@@ -97,7 +97,10 @@ function save() {
 var anim = document.getElementById("anim");
 var pfx = ["webkit","moz","MS","o",""];
 
-anim.addEventListener("onclick",ToggleAnimation, false);
+if (anim){
+  anim.addEventListener("click",ToggleAnimation, false);
+}
+
 
 function PrefixedEvent(element, type, callback) {
   for (var p = 0; p < pfx.length; p++){
