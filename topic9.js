@@ -10,6 +10,7 @@ var x = "black",
     y = 2;
 
 function initialize() {
+  /*Canvas*/
   canvas = document.getElementById("drawCanvas");
   ctx = canvas.getContext("2d");
   w = canvas.width;
@@ -28,7 +29,11 @@ function initialize() {
     findxy('out',e)
   }, false);
 
+/*Date*/
   document.getElementById("date").innerHTML = "This page was loaded on: " + Date();
+
+/*Animation*/
+  anim.addEventListener("click",ToggleAnimation, false);
 }
 
 function color(obj) {
@@ -96,11 +101,6 @@ function save() {
 /*Animation Events*/
 var anim = document.getElementById("anim");
 var pfx = ["webkit","moz","MS","o",""];
-
-document.addEventListener("DOMContentLoaded",function(){
-  anim.addEventListener("click",ToggleAnimation, false);
-});
-
 
 
 
