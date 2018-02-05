@@ -99,7 +99,7 @@ var pfx = ["webkit","moz","MS","o",""];
 
 document.addEventListener('DOMContentLoaded',function(){
   anim.addEventListener("click",ToggleAnimation, false);
-})
+});
 
 
 
