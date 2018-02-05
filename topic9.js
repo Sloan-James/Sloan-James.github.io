@@ -125,7 +125,7 @@ function AnimationListener(e) {
 function ToggleAnimation(e) {
   var anim = document.getElementById("anim");
   var on = (anim.className != "");
-  anim.textContent = "Click to "+(on ? "start" : "stop")+"animation";
+  anim.textContent = "Click to "+(on ? "start" : "stop")+" animation";
   anim.className = (on ? "" : "enable");
   if (e) e.preventDefault();
 };
