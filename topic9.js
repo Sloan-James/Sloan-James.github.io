@@ -94,7 +94,7 @@ function save() {
 }
 
 /*Animation Events*/
-var anim = document.getElementById("animation");
+var anim = document.getElementById("anim");
 var pfx = ["webkit","moz","MS","o",""];
 
 anim.addEventListener("click",ToggleAnimation, false);
