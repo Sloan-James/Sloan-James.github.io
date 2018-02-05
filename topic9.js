@@ -126,4 +126,4 @@ function ToggleAnimation(e) {
   anim.textContent = "Click to "+(on ? "start" : "stop")+"animation";
   anim.className = (on ? "" : "enable");
   if (e) e.preventDefault();
-}
+};
