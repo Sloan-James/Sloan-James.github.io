@@ -35,6 +35,9 @@ function initialize() {
 /*Animation*/
   var anim = document.getElementById("anim");
   anim.addEventListener("click",ToggleAnimation, false);
+  PrefixedEvent(anim, "AnimationStart", AnimationListener);
+  PrefixedEvent(anim, "AnimationIteration", AnimationListener);
+  PrefixedEvent(anim, "AnimationEnd", AnimationListener);
 }
 
 function color(obj) {
@@ -100,7 +103,6 @@ function save() {
 }
 
 /*Animation Events*/
-var anim = document.getElementById("anim");
 var pfx = ["webkit","moz","MS","o",""];
 
 
@@ -112,9 +114,7 @@ function PrefixedEvent(element, type, callback) {
     }
 }
 
-PrefixedEvent(anim, "AnimationStart", AnimationListener);
-PrefixedEvent(anim, "AnimationIteration", AnimationListener);
-PrefixedEvent(anim, "AnimationEnd", AnimationListener);
+
 
 function AnimationListener(e) {
   if(e.type.toLowerCase().indexOf("animationend") >= 0) {
@@ -123,6 +123,7 @@ function AnimationListener(e) {
 }
 
 function ToggleAnimation(e) {
+  var anim = document.getElementById("anim");
   var on = (anim.className != "");
   anim.textContent = "Click to "+(on ? "start" : "stop")+"animation";
   anim.className = (on ? "" : "enable");
