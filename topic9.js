@@ -16,8 +16,10 @@ function initialize() {
   w = canvas.width;
   h = canvas.height;
 
-  document.addEventListener('touchstart', function(e) {e.preventDefault()}, false);
-  document.addEventListener('touchmove', function(e) {e.preventDefault()}, false);
+
+  document.addEventListener('touchmove', function(e) {
+    findxy('move',e)
+  }, false);
 
 /*Mouse use*/
   canvas.addEventListener("mousemove", function (e) {
