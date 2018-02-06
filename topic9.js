@@ -20,19 +20,23 @@ function initialize() {
   /*Touch use*/
     canvas.addEventListener("touchmove", function (e) {
       touchobj = e.changedTouches[0];
+      e.preventDefault();
       findxy('move', touchobj);
     }, false);
     canvas.addEventListener("touchstart", function (e) {
       touchobj = e.changedTouches[0];
-      findxy('down',touchobj)
+      e.preventDefault();
+      findxy('down',touchobj);
     }, false);
     canvas.addEventListener("touchend", function (e) {
       touchobj = e.changedTouches[0];
-      findxy('up',touchobj)
+      e.preventDefault();
+      findxy('up',touchobj);
     }, false);
     canvas.addEventListener("touchleave",function (e){
       touchobj = e.changedTouches[0];
-      findxy('out',touchobj)
+      e.preventDefault();
+      findxy('out',touchobj);
     }, false);
 
 /*Mouse use*/
