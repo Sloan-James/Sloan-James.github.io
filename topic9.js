@@ -16,27 +16,6 @@ function initialize() {
   w = canvas.width;
   h = canvas.height;
 
-  /*Touch use*/
-  touchAvailable = false;
-  document.addEventListener("touchstart",touchAvailable=true; function (e){
-    e.preventDefault();
-  },false);
-  document.addEventListener("touchmove",function (e){
-    e.preventDefault()
-  },false);
-
-    canvas.addEventListener("touchmove", function (e) {
-      findxy('move', e)
-    }, false);
-    canvas.addEventListener("touchstart", function (e) {
-      findxy('down',e)
-    }, false);
-    canvas.addEventListener("touchend", function (e) {
-      findxy('up',e)
-    }, false);
-    canvas.addEventListener("touchcancel",function (e){
-      findxy('out',e)
-    }, false);
 
 /*Mouse use*/
 if(!touchAvailable){
@@ -63,6 +42,7 @@ if(!touchAvailable){
 /*Animation*/
   var anim = document.getElementById("anim");
   anim.addEventListener("click",ToggleAnimation, false);
+  anim.addEventListener("onTouchBegin",ToggleAnimation,false);
   PrefixedEvent(anim, "AnimationStart", AnimationListener);
   PrefixedEvent(anim, "AnimationIteration", AnimationListener);
   PrefixedEvent(anim, "AnimationEnd", AnimationListener);
