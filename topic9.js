@@ -42,7 +42,6 @@ if(!touchAvailable){
 /*Animation*/
   var anim = document.getElementById("anim");
   anim.addEventListener("click",ToggleAnimation, false);
-  anim.addEventListener("ontouchend",ToggleAnimation,false);
   PrefixedEvent(anim, "AnimationStart", AnimationListener);
   PrefixedEvent(anim, "AnimationIteration", AnimationListener);
   PrefixedEvent(anim, "AnimationEnd", AnimationListener);
