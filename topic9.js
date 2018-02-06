@@ -40,7 +40,7 @@ function initialize() {
 /*Animation*/
   var anim = document.getElementById("anim");
   anim.addEventListener("click",ToggleAnimation, false);
-  anim.addEventListener("ontouchstart",ToggleAnimation,false);
+  /*anim.addEventListener("ontouchstart",ToggleAnimation,false);*/
   PrefixedEvent(anim, "AnimationStart", AnimationListener);
   PrefixedEvent(anim, "AnimationIteration", AnimationListener);
   PrefixedEvent(anim, "AnimationEnd", AnimationListener);
