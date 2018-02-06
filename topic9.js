@@ -16,6 +16,8 @@ function initialize() {
   w = canvas.width;
   h = canvas.height;
 
+  document.addEventListener('touchstart', function(e) {e.preventDefault()}, false);
+  document.addEventListener('touchmove', function(e) {e.preventDefault()}, false);
 
 /*Mouse use*/
   canvas.addEventListener("mousemove", function (e) {
@@ -40,7 +42,6 @@ function initialize() {
 /*Animation*/
   var anim = document.getElementById("anim");
   anim.addEventListener("click",ToggleAnimation, false);
-  /*anim.addEventListener("ontouchstart",ToggleAnimation,false);*/
   PrefixedEvent(anim, "AnimationStart", AnimationListener);
   PrefixedEvent(anim, "AnimationIteration", AnimationListener);
   PrefixedEvent(anim, "AnimationEnd", AnimationListener);
