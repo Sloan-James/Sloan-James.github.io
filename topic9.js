@@ -18,7 +18,6 @@ function initialize() {
 
 
 /*Mouse use*/
-if(!touchAvailable){
   canvas.addEventListener("mousemove", function (e) {
     findxy('move', e)
   }, false);
@@ -31,7 +30,6 @@ if(!touchAvailable){
   canvas.addEventListener("mouseout",function (e){
     findxy('out',e)
   }, false);
-}
 
 
 
