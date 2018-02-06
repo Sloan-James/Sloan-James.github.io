@@ -16,7 +16,25 @@ function initialize() {
   w = canvas.width;
   h = canvas.height;
 
+  /*Touch use*/
+  touchAvailable = false;
+  canvas.addEventListener("onTouchBegin",touchAvailable=true,false);
+
+    canvas.addEventListener("touchmove", function (e) {
+      findxy('move', e)
+    }, false);
+    canvas.addEventListener("touchstart", function (e) {
+      findxy('down',e)
+    }, false);
+    canvas.addEventListener("touchend", function (e) {
+      findxy('up',e)
+    }, false);
+    canvas.addEventListener("touchcancel",function (e){
+      findxy('out',e)
+    }, false);
+
 /*Mouse use*/
+if(!touchAvailable){
   canvas.addEventListener("mousemove", function (e) {
     findxy('move', e)
   }, false);
@@ -29,20 +47,10 @@ function initialize() {
   canvas.addEventListener("mouseout",function (e){
     findxy('out',e)
   }, false);
+}
 
-/*Touch use*/
-  canvas.addEventListener("touchmove", function (e) {
-    findxy('move', e)
-  }, false);
-  canvas.addEventListener("touchstart", function (e) {
-    findxy('down',e)
-  }, false);
-  canvas.addEventListener("touchend", function (e) {
-    findxy('up',e)
-  }, false);
-  canvas.addEventListener("touchcancel",function (e){
-    findxy('out',e)
-  }, false);
+
+
 
 /*Date*/
   document.getElementById("date").innerHTML = "This page was loaded on: " + Date();
