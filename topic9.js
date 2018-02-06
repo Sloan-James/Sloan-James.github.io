@@ -18,7 +18,12 @@ function initialize() {
 
   /*Touch use*/
   touchAvailable = false;
-  canvas.addEventListener("onTouchBegin",touchAvailable=true,false);
+  document.addEventListener("touchstart",touchAvailable=true; function (e){
+    e.preventDefault();
+  },false);
+  document.addEventListener("touchmove",function (e){
+    e.preventDefault()
+  },false);
 
     canvas.addEventListener("touchmove", function (e) {
       findxy('move', e)
