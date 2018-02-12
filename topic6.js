@@ -1,7 +1,7 @@
 function nameCombine(el) {
   var para = document.createElement("P");
   para.innerHTML = el.previousSibling.previousSibling.nodeValue + el.previousSibling.nodeValue;
-  el.nextSibling.appendChild(para);
+  el.parentNode.appendChild(para);
 }
 
 function reorder() {
