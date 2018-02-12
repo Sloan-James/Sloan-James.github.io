@@ -1,5 +1,5 @@
 function nameCombine(el) {
-  var para document.createElement("P");
+  var para = document.createElement("P");
   para.innerHTML = el.previousSibling.previousSibling.nodeValue + el.previousSibling.nodeValue;
   el.appendChild(para);
 }
