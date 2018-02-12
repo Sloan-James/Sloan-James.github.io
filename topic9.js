@@ -56,7 +56,7 @@ function initialize() {
 
 
 
-/*Date*/
+/*Date/onLoad*/
   document.getElementById("date").innerHTML = "This page was loaded on: " + Date();
 
 /*Animation*/
