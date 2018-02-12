@@ -3,6 +3,7 @@
 <head>
     <title>CIT 261</title>
     <link rel="stylesheet" type="text/css" href="overall.css">
+    <script src="topic6.js"></script>
 </head>
 <body>
   <header>
@@ -28,12 +29,13 @@
   </header>
   <h1>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.</h1>
   <div>
-    <input type="text" name="FirstName"><br>
-    <input type="text" name="LastName"><br>
+    <input type="text" value="First Name" name="FirstName"><br>
+    <input type="text" value="Last Name" name="LastName"><br>
     <button onclick="nameCombine(this)">Combine</button>
   </div>
+  <br>
   <div>
-    <ul id="List">
+    <ul style="list-style-type: square;" id="List">
       <li>A</li>
       <li>B</li>
       <li>C</li>
