@@ -1,7 +1,7 @@
 function nameCombine(el) {
   var parent = el.parentNode;
   var para = document.createElement("P");
-  para.innerHTML = document.getElementById("FirstName").value + document.getElementById("LastName").value;
+  para.innerHTML = document.getElementById("FirstName").value + " " document.getElementById("LastName").value;
   parent.removeChild(parent.lastChild);
   parent.appendChild(para);
 }
