@@ -10,5 +10,4 @@ function reorder() {
   var list = document.getElementById("List");
   var node = list.lastChild;
   list.insertBefore(node,list.childNodes[0]);
-  console.log("test");
 }
