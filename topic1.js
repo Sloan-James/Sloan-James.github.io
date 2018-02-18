@@ -1,11 +1,11 @@
 var Expenses = new Array();
 
 function addExpense() {
+  var date = document.getElementById("date").value;
+  if (validateDate(date)) {
 
-  var I = new function(){
-    var date = document.getElementById("date").value;
+    var I = new function(){
 
-    if (validateDate(date)) {
       var day, month, year;
 
       result = date.match("[0-9]{2}([\-/ \.])[0-9]{2}[\-/ \.][0-9]{4}");
@@ -29,7 +29,7 @@ function addExpense() {
     Expenses.push(I);
 
     displayExpenses();
-    }
+  }
 
 }
 
