@@ -3,6 +3,7 @@
 <head>
     <title>CIT 261</title>
     <link rel="stylesheet" type="text/css" href="overall.css">
+    <script src="topic1.js"></script>
 </head>
 <body>
   <header>
@@ -27,6 +28,17 @@
       </nav>
   </header>
   <h1>Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</h1>
+  <h3>Expenses Example</h3>
+  <p>Date (mm/dd/yyyy): </p><input type="text" id="date"><br>
+  <p>Expense: </p><input type="text" id="description"><br>
+  <p>Cost: </p><input type="number" id="cost"><br>
+  <button onclick="addExpense()">Add Expense</button>
+  <button onclick="removeExpense()">Remove Expense</button>
+  <p>Expense Position: </p><input type="number" id="removeID"><br>
+  <ul id="expenseList">
+  </ul>
+  <button onclick="removeAll()">Delete All</button>
+
   <footer>
     <p>Maintained and Personally coded by James Sloan</p>
   </footer>
