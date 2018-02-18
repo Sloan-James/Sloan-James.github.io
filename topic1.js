@@ -97,7 +97,7 @@ function validateDate(date) {
     var yyyy = parseInt(values[2]);
 
     var ListofDays = [31,28,31,30,31,30,31,31,30,31,30,31];
-    if (mm==1 || mm>2) {
+    if ((mm==1 || mm>2) && !(mm > 12 || mm < 1)) {
       if(dd>ListofDays[mm-1]) {
         alert("Invalid date format");
         return false;
