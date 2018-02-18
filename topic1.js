@@ -36,8 +36,8 @@ function addExpense() {
 function removeExpense() {
   var ID = document.getElementById("removeID").value;
 
-  if(ID > 1 && ID <= Expenses.length) {
-    Expenses.splice(ID-1,1);
+  if(ID >= 1 && ID <= Expenses.length) {
+    Expenses.splice((ID-1),1);
   }
 
   displayExpenses();
@@ -73,7 +73,7 @@ function displayExpenses() {
   var result = "";
   for (i = 0; i < Expenses.length; i++) {
     var date = Expenses[i].month + "/" + Expenses[i].day + "/" + Expenses[i].year;
-    result += "<li>" + i + ": " + date + " - " + Expenses[i].description + " : $" + Expenses[i].cost + "</li>";
+    result += "<li>" + (i+1) + ": " + date + " - " + Expenses[i].description + " : $" + Expenses[i].cost + "</li>";
   }
 
   document.getElementById("expenseList").innerHTML = result;
@@ -84,6 +84,7 @@ function removeAll() {
     while( Expenses.length > 0) {
       Expenses.pop();
     }
+    displayExpenses();
   }
 }
 
@@ -114,6 +115,10 @@ function validateDate(date) {
         return false;
       }
     }
-
+    return true;
+  } else {
+    alert("Invalid date format");
+    return false;
   }
+
 }
