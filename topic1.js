@@ -39,6 +39,7 @@ function removeExpense() {
   if(ID >= 1 && ID <= Expenses.length) {
     Expenses.splice((ID-1),1);
   }
+  document.getElementById("removeID").value = "";
 
   displayExpenses();
 }
