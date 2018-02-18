@@ -71,7 +71,7 @@ function displayExpenses() {
   });
 
   var result = "";
-  for (i = 0, i < Expenses.length, i++) {
+  for (i = 0; i < Expenses.length; i++) {
     var date = Expenses[i].month + "/" + Expenses[i].day + "/" + Expenses[i].year;
     result += "<li>" + i + ": " + date + " - " + Expenses[i].description + " : $" + Expenses[i].cost + "</li>";
   }
