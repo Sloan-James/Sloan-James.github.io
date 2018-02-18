@@ -30,9 +30,9 @@ function addExpense() {
 
     displayExpenses();
     }
-    else (
+    else {
       alert("Please enter date in mm/dd/yyyy format with a proper date");
-    )
+    }
 
 }
 
@@ -76,7 +76,7 @@ function displayExpenses() {
   var result = "";
   for (i = 0, i < Expenses.length, i++) {
     var date = Expenses[i].month + "/" + Expenses[i].day + "/" + Expenses[i].year;
-    result += "<li>" + date + " - " + Expenses[i].description + " : " + Expenses[i].cost + "</li>";
+    result += "<li>" + i + ": " + date + " - " + Expenses[i].description + " : $" + Expenses[i].cost + "</li>";
   }
 
   document.getElementById("expenseList").innerHTML = result;
