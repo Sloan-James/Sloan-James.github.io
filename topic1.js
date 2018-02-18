@@ -30,9 +30,6 @@ function addExpense() {
 
     displayExpenses();
     }
-    else {
-      alert("Please enter date in mm/dd/yyyy format with a proper date");
-    }
 
 }
 
