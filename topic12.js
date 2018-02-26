@@ -5,7 +5,7 @@ image.src = "Deck/cards.png";
 function cutImageUp() {
   var imagePieces = [];
   for(var x = 0; x < 13; x++) {
-    for(var y = 0; y < numRowsToCut; y++) {
+    for(var y = 0; y < 4; y++) {
       var canvas = document.createElement('canvas');
       canvas.width = 73.077;
       canvas.height = 98;
