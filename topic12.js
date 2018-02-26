@@ -16,5 +16,5 @@ function cutImageUp() {
   }
 
   var anImageElement = document.getElementById('playerDeck');
-  anImageElement.style.backgroundImage = "url(imagePieces[0])";
+  anImageElement.style.backgroundImage = imagePieces[0];
 }
