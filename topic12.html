@@ -3,6 +3,10 @@
 <head>
     <title>CIT 261</title>
     <link rel="stylesheet" type="text/css" href="overall.css">
+    <script src="topic11.js"></script>
+    <style>
+      
+    </style>
 </head>
 <body>
   <header>
@@ -27,6 +31,20 @@
       </nav>
   </header>
   <h1>Designing, Defining, and Triggering CSS3 Transforms without Custom Libraries (Thought Library)</h1>
+    <div class="flip-container" id="playerDeck">
+      <div class="blankCard" id="blankCard" onclick="flip()"></div>
+      <div class="flipper" id="card">
+        <div class="back" id="back" onclick="drawCard()"></div>
+        <div class ="front" id="front"></div>
+      </div>
+    </div>
+    <div class="flip-container" id="ComDeck">
+      <div class="blankCard" id="ComBlankCard"></div>
+      <div class="flipper" id="ComCard">
+        <div class="back" id="ComBack"></div>
+        <div class ="front" id="ComFront"></div>
+      </div>
+    </div>
   <footer>
     <p>Maintained and Personally coded by James Sloan</p>
   </footer>
