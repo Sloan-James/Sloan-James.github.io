@@ -3,11 +3,58 @@
 <head>
     <title>CIT 261</title>
     <link rel="stylesheet" type="text/css" href="overall.css">
-    <script src="topic12.js"></script>
     <style>
-      .flip-container .front .back .blankCard{
+        .flip-container {
+            perspective: 1000px;
+            margin: 50px;
+        }
+        .flipper.flipped {
+            transform: rotateY(180deg);
+            transform-origin: 80px center;
+        }
+        .flipper.war {
+            transform-origin: 80px center;
+        }
+        .flipper.stowed {
+            margin-left: -85px;
+            z-index: -1;
+        }
+      .flip-container, .front, .back, .blankCard, #test{
         width: 73.077px;
         height: 98px;
+      }
+      .flipper {
+          transition: 1.5s;
+          transform-style: preserve-3d;
+          position: relative;
+      }
+      .front, .back, .blankCard {
+          backface-visibility: hidden;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border: 1px;
+      }
+      .back, .blankCard {
+          background-image: url('Deck/playing-card-back.jpg');
+          background-size: contain;
+          background-repeat: no-repeat;
+      }
+      .back {
+          z-index: 2;
+      }
+      #deck {
+         border-style: solid;
+         border: 1px;
+      }
+      .front {
+          transform: rotate(180deg);
+          transform: scaleX(-1);
+          backface-visibility: visible;
+      }
+      .low {
+          z-index: -2;
+          display: none;
       }
     </style>
 </head>
@@ -34,21 +81,26 @@
       </nav>
   </header>
   <h1>Designing, Defining, and Triggering CSS3 Transforms without Custom Libraries (Thought Library)</h1>
+  <h2>Game of War</h2>
+  <h5> Player </h5>
+  <p id="playerSize"></p>
     <div class="flip-container" id="playerDeck">
-      <div class="blankCard" id="blankCard" onclick="flip()"></div>
-      <div class="flipper" id="card">
-        <div class="back" id="back" onclick="drawCard()"></div>
-        <div class ="front" id="front"></div>
+      <div class="blankCard" id="blankCard" onclick="storeAndFlip()"></div>
+      <div class="flipper" id="playerCard">
+        <div class="back" id="playerBack" onclick="flip()"></div>
+        <div class ="front" id="playerFront" onclick="storeCard()"></div>
       </div>
     </div>
-    <div class="flip-container" id="ComDeck">
-      <div class="blankCard" id="ComBlankCard"></div>
-      <div class="flipper" id="ComCard">
-        <div class="back" id="ComBack"></div>
-        <div class ="front" id="ComFront"></div>
+  <h5> Computer </h5>
+  <p id="computerSize"></p>
+    <div class="flip-container" id="computerDeck">
+      <div class="blankCard" id="computerBlankCard"></div>
+      <div class="flipper" id="computerCard">
+        <div class="back" id="computerBack"></div>
+        <div class ="front" id="computerFront"></div>
       </div>
     </div>
-    <image id="test"></image>
+  <script src="topic12.js"></script>
   <footer>
     <p>Maintained and Personally coded by James Sloan</p>
   </footer>
