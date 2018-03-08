@@ -3,6 +3,13 @@
 <head>
     <title>CIT 261</title>
     <link rel="stylesheet" type="text/css" href="overall.css">
+    <script src="topic2.js"></script>
+    <style>
+        #list{
+            width: 100%;
+        }
+
+    </style>
 </head>
 <body>
   <header>
@@ -27,8 +34,21 @@
       </nav>
   </header>
   <h1>Object Creation Functions, Inheritance, Properties, Methods, Instantiation</h1>
+  <div>
+    <table id="list"></table>
+  </div><br/>
+  <div>
+    <label>Enter an item:</label><input id="item" type="text" value=""><br/>
+    <label>Enter needed amount:</label><input id="amount" type="text" value=""><br/>
+    <button onclick="addToList()">Add to List</button><br/><br/>
+  </div>
+  <div>
+      <label>Item Number to Remove:</label><input id="remove" type="number"><br/>
+      <button onclick="removeFromList()">Remove from List</button><br/><br/>
+  </div>
   <footer>
     <p>Maintained and Personally coded by James Sloan</p>
   </footer>
+  <script>loadList();</script>
 </body>
 </html>
