@@ -3,6 +3,12 @@
 <head>
     <title>CIT 261</title>
     <link rel="stylesheet" type="text/css" href="overall.css">
+    <script src="topic5.js"></script>
+    <style>
+        #list {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
   <header>
@@ -27,8 +33,18 @@
       </nav>
   </header>
   <h1>Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</h1>
+  <div>
+      <h3>Grocery List</h3>
+    <table id="list"></table>
+  </div><br/>
+  <div>
+    <label>Enter an item:</label><input id="item" type="text" value=""><br/>
+    <label>Enter needed amount:</label><input id="amount" type="text" value=""><br/>
+    <button onclick="addToList()">Add to List</button><br/><br/>
+  </div>
   <footer>
     <p>Maintained and Personally coded by James Sloan</p>
   </footer>
+  <script>loadList();</script>
 </body>
 </html>
